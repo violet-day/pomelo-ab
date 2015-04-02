@@ -17,9 +17,11 @@
   },
   "homepage": "https://github.com/violet-day/pomelo-ab",
   "dependencies": {
+    "config": "^1.12.0",
     "lodash": "^3.6.0",
     "pomelo-node-client": "git://github.com/williamdu2877/pomelo-node-client",
     "pomelo-robot": "^0.1.4",
+    "redis": "^0.12.1",
     "uuid": "^2.0.1"
   }
 }
