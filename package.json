@@ -1,0 +1,25 @@
+{
+  "name": "pomelo-ab",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/violet-day/pomelo-ab.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/violet-day/pomelo-ab/issues"
+  },
+  "homepage": "https://github.com/violet-day/pomelo-ab",
+  "dependencies": {
+    "lodash": "^3.6.0",
+    "pomelo-node-client": "git://github.com/williamdu2877/pomelo-node-client",
+    "pomelo-robot": "^0.1.4",
+    "uuid": "^2.0.1"
+  }
+}
