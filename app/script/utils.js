@@ -22,4 +22,4 @@ exports._genUid = function () {
   return id;
 };
 
-exports.writeFileSync('../data/uids.json',exports.genUsers(10000));
+//exports.writeFileSync('../data/uids.json',exports.genUsers(10000));
