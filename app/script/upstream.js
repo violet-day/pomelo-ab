@@ -17,7 +17,9 @@ exports.getRandomUser = function (count, cb) {
   }
   query.exec(function (err, result) {
     if (err)return cb(err);
-    cb(null, result.map(function (key) {
+    cb(null, result.filter(function (key) {
+      return key.indexOf(':')!==-1;
+    }).map(function (key) {
       return key.split(':')[2]
     }));
   });
