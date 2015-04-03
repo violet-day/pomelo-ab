@@ -23,10 +23,7 @@ exports.getRandomUser = function (count, cb) {
   });
 };
 
-var upstream = {
-  host: '127.0.0.1',
-  clientPort: 5001
-};
+var upstream = config.upstream;
 
 client.init({host: upstream.host, port: upstream.clientPort, log: true}, function () {
   var tick = 1;

@@ -5,6 +5,10 @@
     "port": 3014,
     "queryEntry": "gate.gateHandler.queryEntry"
   },
+  "upstream":{
+    "host": "127.0.0.1",
+    "clientPort": 5001
+  },
   "redis":{
     "host":"127.0.0.1",
     "port":6379
