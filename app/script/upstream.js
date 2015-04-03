@@ -10,6 +10,7 @@ var redis = require('redis'),
   config = require('../config/' + env + '/config.json'),
   redisClient = redis.createClient(config.redis);
 
+console.log(config.redis);
 exports.getRandomUser = function (count, cb) {
   var query = redisClient.multi();
   for (var i = 0; i < count; i++) {
@@ -17,6 +18,7 @@ exports.getRandomUser = function (count, cb) {
   }
   query.exec(function (err, result) {
     if (err)return cb(err);
+    console.log(result);
     cb(null, result.filter(function (key) {
       return key.indexOf(':')!==-1;
     }).map(function (key) {
