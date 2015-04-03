@@ -5,7 +5,10 @@ var client = require('pomelo-node-client');
 var _ = require('lodash');
 
 var redis = require('redis'),
-  redisClient = redis.createClient();
+
+  env = require('../config/env.json').env,
+  config = require('../config/' + env + '/config.json'),
+  redisClient = redis.createClient(config.redis);
 
 exports.getRandomUser = function (count, cb) {
   var query = redisClient.multi();

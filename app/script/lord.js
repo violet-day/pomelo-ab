@@ -10,13 +10,13 @@ var cwd = process.cwd();
 
 //var utils = require('./utils');
 
+var env = require(cwd+'/app/config/env.json').env;
+var config = require(cwd+'/app/config/' + env + '/config.json');
+
 var uid = uuid.v4();
 
-var gate = {
-  host: '127.0.0.1',
-  port: 3014,
-  queryEntry: 'gate.gateHandler.queryEntry'
-};
+var gate = config.gate;
+console.log(gate);
 
 client.init({host: gate.host, port: gate.port, log: true}, function (err) {
   //should.not.exist(err);
