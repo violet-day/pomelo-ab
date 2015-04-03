@@ -29,7 +29,7 @@ client.init({host: upstream.host, port: upstream.clientPort, log: true}, functio
   var tick = 1;
   setInterval(function () {
     tick++;
-    _.times(100, function () {
+    _.times(500, function () {
       exports.getRandomUser(10, function (err, uids) {
         client.request('upstream.upstreamHandler.doRpc', {
           serviceName: 'push',
