@@ -1,16 +1,29 @@
 {
-  "master": {"host": "127.0.0.1", "port":8888, "webport":8889, "interval":500},
-  "gate":{
+  "master": {
     "host": "127.0.0.1",
-    "port": 3014,
-    "queryEntry": "gate.gateHandler.queryEntry"
+    "port": 8888,
+    "webport": 8889,
+    "interval": 500
   },
-  "upstream":{
+  "apps": {
     "host": "127.0.0.1",
-    "clientPort": 5001
+    "clientPort": 3005
   },
-  "redis":{
-    "host":"127.0.0.1",
-    "port":6379
+  "gate": [
+    {
+      "host": "127.0.0.1",
+      "port": 3014,
+      "queryEntry": "gate.gateHandler.queryEntry"
+    }
+  ],
+  "upstream": [
+    {
+      "host": "127.0.0.1",
+      "clientPort": 5001
+    }
+  ],
+  "redis": {
+    "host": "127.0.0.1",
+    "port": 6379
   }
 }
