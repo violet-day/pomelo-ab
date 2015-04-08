@@ -1,16 +1,56 @@
 {
-  "master": {"host": "10.40.1.252", "port":8888, "webport":8889, "interval":500},
-  "gate":{
-    "host": "10.40.1.7",
-    "port": 3014,
-    "queryEntry": "gate.gateHandler.queryEntry"
+  "master": {
+    "host": "10.40.1.252",
+    "port": 8888,
+    "webport": 8889,
+    "interval": 500
   },
-  "upstream":{
+  "apps": {
     "host": "10.40.1.7",
-    "clientPort": 5001
+    "clientPort": 3005
   },
-  "redis":{
-    "host":"edu-ppe.mekld3.0001.cnn1.cache.amazonaws.com.cn",
-    "port":6379
+  "gate": [
+    {
+      "host": "10.40.1.7",
+      "port": 3014,
+      "queryEntry": "gate.gateHandler.queryEntry"
+    },
+    {
+      "host": "10.40.1.7",
+      "port": 3015,
+      "queryEntry": "gate.gateHandler.queryEntry"
+    },
+    {
+      "host": "10.40.1.7",
+      "port": 3016,
+      "queryEntry": "gate.gateHandler.queryEntry"
+    },
+    {
+      "host": "10.40.1.7",
+      "port": 3017,
+      "queryEntry": "gate.gateHandler.queryEntry"
+    }
+  ],
+  "upstream": [
+    {
+      "host": "10.40.1.7",
+      "clientPort": 5001
+    },
+    {
+      "host": "10.40.1.7",
+      "clientPort": 5002
+    },
+    {
+      "host": "10.40.1.7",
+      "clientPort": 5003
+    },
+    {
+      "host": "10.40.1.7",
+      "clientPort": 5004
+    }
+  ],
+  "redis": {
+    "host": "edu-ppe.mekld3.0001.cnn1.cache.amazonaws.com.cn",
+    "port": 6379
   }
 }

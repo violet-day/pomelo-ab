@@ -6,17 +6,17 @@
 var client = require('pomelo-node-client');
 var uuid = require('uuid');
 var cwd = process.cwd();
+var _ = require('lodash');
 //var utils = require(cwd + '/app/script/utils');
 
 //var utils = require('./utils');
 
-var env = require(cwd+'/app/config/env.json').env;
-var config = require(cwd+'/app/config/' + env + '/config.json');
+var env = require(cwd + '/app/config/env.json').env;
+var config = require(cwd + '/app/config/' + env + '/config.json');
 
 var uid = uuid.v4();
 
-var gate = config.gate;
-console.log(gate);
+var gate = config.gate[_.random(0, config.gate.length - 1)];
 
 client.init({host: gate.host, port: gate.port, log: true}, function (err) {
   //should.not.exist(err);
